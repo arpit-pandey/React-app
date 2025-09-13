@@ -55,10 +55,6 @@ This document provides in-depth technical details about the Multi-Tenant E-comme
 - **UI Isolation**: Each tenant gets their own branding and theme
 - **Performance Isolation**: One tenant's load doesn't affect others
 
-### 3. **Indian Market Focus**
-- **Localization**: INR currency, Hindi language support
-- **Payment Methods**: UPI, Digital Wallets (popular in India)
-- **Cultural Context**: Indian names, brands, and business practices
 
 ## 🔧 Technical Implementation
 
