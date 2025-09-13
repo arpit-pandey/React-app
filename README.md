@@ -2,7 +2,36 @@
 
 A comprehensive micro-frontend e-commerce platform built with React 18+ and Module Federation, designed for the Indian market with full localization support.
 
-## 🎯 Project Overview
+## � **Deploy & Run on GitHub**
+
+### **Option 1: GitHub Codespaces (Instant Setup)**
+1. Go to: `https://github.com/arpit-pandey/React-app`
+2. Click **Code** → **Codespaces** → **Create codespace on master**
+3. Wait for environment setup (2-3 minutes)
+4. Run: `npm run start:all`
+5. Open ports 3050, 3001, 3002, 3003, 3004 when prompted
+6. Access shell at the provided Codespace URL
+
+### **Option 2: Gitpod (One-Click Setup)**
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/arpit-pandey/React-app)
+
+### **Option 3: GitHub Pages (Auto-Deploy)**
+- GitHub Actions workflow included (`.github/workflows/deploy.yml`)
+- Automatically deploys on push to master
+- Enable GitHub Pages in repository settings
+- Site will be available at: `https://arpit-pandey.github.io/React-app`
+
+### **Option 4: Netlify (Drag & Drop)**
+1. Build locally: `npm run build:all`
+2. Drag `deploy` folder to [Netlify Drop](https://app.netlify.com/drop)
+3. Or connect GitHub repo for auto-deploy
+
+### **Option 5: Vercel (One-Click)**
+1. Import project from GitHub at [vercel.com](https://vercel.com)
+2. Auto-detects configuration from `vercel.json`
+3. Deploys all micro-frontends automatically
+
+## �🎯 Project Overview
 
 This project is a **multi-tenant e-commerce platform** that allows multiple businesses to create and customize their own storefronts while sharing core functionality. Each tenant gets their own branded experience with configurable features, themes, and business logic.
 

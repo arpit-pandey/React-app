@@ -1,0 +1,49 @@
+name: Deploy Multi-Tenant E-commerce Platform
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Build all micro-frontends
+      run: |
+        npm run build --workspace=apps/shell
+        npm run build --workspace=apps/storefront  
+        npm run build --workspace=apps/catalog
+        npm run build --workspace=apps/orders
+        npm run build --workspace=apps/analytics
+    
+    - name: Create deployment directory
+      run: |
+        mkdir -p deploy
+        cp -r apps/shell/dist/* deploy/
+        mkdir -p deploy/storefront deploy/catalog deploy/orders deploy/analytics
+        cp -r apps/storefront/dist/* deploy/storefront/
+        cp -r apps/catalog/dist/* deploy/catalog/
+        cp -r apps/orders/dist/* deploy/orders/
+        cp -r apps/analytics/dist/* deploy/analytics/
+    
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/master'
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./deploy
+        cname: your-custom-domain.com  # Optional: Add your custom domain

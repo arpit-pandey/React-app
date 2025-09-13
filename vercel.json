@@ -1,0 +1,48 @@
+{
+  "version": 2,
+  "name": "multi-tenant-ecommerce",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["apps/**"]
+      }
+    }
+  ],
+  "buildCommand": "npm ci && npm run build --workspace=apps/shell && npm run build --workspace=apps/storefront && npm run build --workspace=apps/catalog && npm run build --workspace=apps/orders && npm run build --workspace=apps/analytics",
+  "outputDirectory": "apps/shell/dist",
+  "routes": [
+    {
+      "src": "/storefront/(.*)",
+      "dest": "/storefront/$1"
+    },
+    {
+      "src": "/catalog/(.*)",
+      "dest": "/catalog/$1"
+    },
+    {
+      "src": "/orders/(.*)",
+      "dest": "/orders/$1"
+    },
+    {
+      "src": "/analytics/(.*)",
+      "dest": "/analytics/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ]
+}
