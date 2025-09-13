@@ -1,0 +1,330 @@
+.storefront-container {
+  padding: 2rem;
+  background: var(--tenant-surface);
+  min-height: 100vh;
+  color: var(--tenant-text);
+}
+
+.storefront-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.storefront-title {
+  color: var(--tenant-primary);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.storefront-desc {
+  color: var(--tenant-text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+/* Builder Layout */
+.builder-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  max-height: 80vh;
+}
+
+/* Component Palette */
+.component-palette {
+  background: var(--tenant-surface);
+  border: 2px solid var(--tenant-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  height: fit-content;
+}
+
+.component-palette h3 {
+  color: var(--tenant-text);
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.palette-grid, .template-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.palette-btn, .template-btn {
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--tenant-border);
+  border-radius: 8px;
+  background: var(--tenant-surface);
+  color: var(--tenant-text);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.palette-btn:hover, .template-btn:hover {
+  border-color: var(--tenant-primary);
+  background: var(--tenant-primary);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.template-btn.active {
+  background: var(--tenant-primary);
+  color: white;
+  border-color: var(--tenant-primary);
+}
+
+/* Page Builder */
+.page-builder {
+  background: var(--tenant-surface);
+  border: 2px solid var(--tenant-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.builder-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: var(--tenant-primary);
+  color: white;
+}
+
+.builder-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.builder-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.clear-btn, .preview-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.clear-btn:hover, .preview-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Page Canvas */
+.page-canvas {
+  padding: 2rem;
+  min-height: 500px;
+  max-height: 600px;
+  overflow-y: auto;
+  background: #f8fafc;
+}
+
+.empty-canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  border: 3px dashed var(--tenant-border);
+  border-radius: 12px;
+  background: white;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--tenant-text-secondary);
+}
+
+.empty-state h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  color: var(--tenant-text);
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Component Preview */
+.component-preview {
+  margin-bottom: 1.5rem;
+  border: 2px solid var(--tenant-border);
+  border-radius: 8px;
+  background: white;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.component-preview:hover {
+  border-color: var(--tenant-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.component-controls {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.component-preview:hover .component-controls {
+  opacity: 1;
+}
+
+.edit-btn, .remove-btn {
+  padding: 0.3rem 0.6rem;
+  border: none;
+  border-radius: 4px;
+  background: var(--tenant-primary);
+  color: white;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.remove-btn {
+  background: #ef4444;
+}
+
+.edit-btn:hover {
+  background: var(--tenant-secondary);
+}
+
+.remove-btn:hover {
+  background: #dc2626;
+}
+
+/* Component Editor */
+.component-editor {
+  padding: 1rem;
+  background: #f1f5f9;
+  border-bottom: 2px solid var(--tenant-border);
+}
+
+.content-editor {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--tenant-border);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.save-btn {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--tenant-primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.save-btn:hover {
+  background: var(--tenant-secondary);
+}
+
+/* Component Previews */
+.preview-header {
+  padding: 2rem;
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--tenant-primary);
+  text-align: center;
+}
+
+.preview-product-grid {
+  padding: 1.5rem;
+}
+
+.preview-product-grid h3 {
+  margin: 0 0 1rem 0;
+  color: var(--tenant-text);
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.grid-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.product-card-preview {
+  aspect-ratio: 1;
+  background: var(--tenant-border);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--tenant-text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.preview-text {
+  padding: 1.5rem;
+  margin: 0;
+  color: var(--tenant-text);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.preview-testimonial {
+  padding: 2rem;
+  margin: 0;
+  background: var(--tenant-surface);
+  border-left: 4px solid var(--tenant-primary);
+  font-style: italic;
+}
+
+.preview-testimonial p {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  color: var(--tenant-text);
+}
+
+.preview-testimonial cite {
+  color: var(--tenant-text-secondary);
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .builder-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .storefront-title {
+    font-size: 2rem;
+  }
+  
+  .component-palette {
+    order: 2;
+  }
+}

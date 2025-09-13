@@ -1,0 +1,21 @@
+.shell-nav {
+  display: flex;
+  gap: 16px;
+  margin: 24px 0 32px 0;
+}
+
+.shell-nav-btn {
+  background: #f1f5f9;
+  color: #2563eb;
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.shell-nav-btn.active, .shell-nav-btn:hover {
+  background: #2563eb;
+  color: #fff;
+}

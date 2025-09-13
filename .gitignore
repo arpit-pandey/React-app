@@ -1,0 +1,23 @@
+# Project requirements and guidelines (do not track in git)
+frontendeng-Multi-Tenant E-commerce Platform Builder - User Stories-100925-094757.txt
+frontendeng-Multi-Tenant E-commerce Platform Builder-100925-094849.txt
+Development Guidelines.txt
+# Node modules
+node_modules/
+apps/*/node_modules/
+shared/node_modules/
+
+# Build output
+dist/
+apps/*/dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Misc
+.DS_Store
+.env
+.env.*
+node_modules

@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Start all micro-frontends and shell",
+			"type": "shell",
+			"command": "npm run start --workspaces",
+			"isBackground": true,
+			"group": "build"
+		}
+	]
+}

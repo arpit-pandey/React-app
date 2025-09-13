@@ -1,0 +1,373 @@
+.catalog-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--tenant-bg, #fff);
+  color: var(--tenant-text, #333);
+}
+
+.catalog-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.catalog-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--tenant-primary, #007bff);
+}
+
+.catalog-desc {
+  font-size: 1.1rem;
+  color: var(--tenant-text-secondary, #666);
+  margin-bottom: 0;
+}
+
+/* Controls Section */
+.catalog-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-filters {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+  min-width: 300px;
+}
+
+.search-bar {
+  flex: 1;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--tenant-border, #ddd);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--tenant-bg, #fff);
+  color: var(--tenant-text, #333);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--tenant-primary, #007bff);
+}
+
+.category-filter {
+  padding: 0.75rem;
+  border: 2px solid var(--tenant-border, #ddd);
+  border-radius: 8px;
+  background: var(--tenant-bg, #fff);
+  color: var(--tenant-text, #333);
+  min-width: 150px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-primary, .btn-secondary, .btn-danger, .btn-edit, .btn-delete {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--tenant-primary, #007bff);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--tenant-primary-dark, #0056b3);
+}
+
+.btn-secondary {
+  background: var(--tenant-secondary, #6c757d);
+  color: white;
+}
+
+.btn-danger {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #c82333;
+}
+
+.btn-edit {
+  background: #28a745;
+  color: white;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.btn-delete {
+  background: #dc3545;
+  color: white;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.btn-edit:hover {
+  background: #218838;
+}
+
+.btn-delete:hover {
+  background: #c82333;
+}
+
+/* Product Stats */
+.product-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: var(--tenant-card-bg, #f8f9fa);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid var(--tenant-border, #e9ecef);
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--tenant-primary, #007bff);
+}
+
+.stat-card p {
+  margin: 0;
+  color: var(--tenant-text-secondary, #666);
+  font-weight: 500;
+}
+
+/* Table */
+.table-container {
+  background: var(--tenant-card-bg, #fff);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.catalog-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.catalog-table th {
+  background: var(--tenant-primary, #007bff);
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.catalog-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--tenant-border, #e9ecef);
+}
+
+.catalog-table tr:hover {
+  background: var(--tenant-hover, #f8f9fa);
+}
+
+.catalog-table tr.selected {
+  background: var(--tenant-selected, #e3f2fd);
+}
+
+.product-info strong {
+  display: block;
+  color: var(--tenant-text, #333);
+  margin-bottom: 0.25rem;
+}
+
+.product-info small {
+  color: var(--tenant-text-secondary, #666);
+  font-style: italic;
+}
+
+.category-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.category-electronics {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.category-clothing {
+  background: #fce4ec;
+  color: #c2185b;
+}
+
+.category-books {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.category-home {
+  background: #e8f5e8;
+  color: #388e3c;
+}
+
+.price {
+  font-weight: bold;
+  color: var(--tenant-primary, #007bff);
+  font-size: 1.1rem;
+}
+
+.variants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.variant-tag {
+  background: var(--tenant-tag-bg, #e9ecef);
+  color: var(--tenant-tag-text, #495057);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.variant-more {
+  background: var(--tenant-primary, #007bff);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: var(--tenant-text-secondary, #666);
+}
+
+.empty-state h3 {
+  margin-bottom: 0.5rem;
+  color: var(--tenant-text, #333);
+}
+
+/* Product Form Modal */
+.product-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.product-form {
+  background: var(--tenant-bg, #fff);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.product-form h3 {
+  margin: 0 0 1.5rem 0;
+  color: var(--tenant-primary, #007bff);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--tenant-text, #333);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--tenant-border, #ddd);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: var(--tenant-bg, #fff);
+  color: var(--tenant-text, #333);
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--tenant-primary, #007bff);
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .catalog-container {
+    padding: 1rem;
+  }
+  
+  .catalog-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-filters {
+    min-width: auto;
+  }
+  
+  .product-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .catalog-table {
+    font-size: 0.875rem;
+  }
+  
+  .catalog-table th,
+  .catalog-table td {
+    padding: 0.5rem;
+  }
+  
+  .product-form {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+}
